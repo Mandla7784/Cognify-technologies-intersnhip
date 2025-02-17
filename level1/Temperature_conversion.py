@@ -9,13 +9,18 @@ class TemperatureConverter:
             temperature = (temperature - 32) / (9/5)
         return temperature
 
-user_temp = int(input('Enter the temp:  '))
-print()
-user_units = input("Enter unit (F or C:  ").upper()
+def main():
+
+
+    user_temp = int(input('Enter the temp:  '))
+    print()
+    user_units = input("Enter unit (F or C:  ").upper()
 
 
 
-results =  TemperatureConverter.convert(user_temp , user_units)
-print(f"Answer is {results}")
+    results =  TemperatureConverter.convert(user_temp , user_units)
+    print(f"Answer is {results}")
 
-    
+        
+if __name__=="__main__":
+    main()
