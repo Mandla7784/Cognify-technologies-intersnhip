@@ -9,9 +9,6 @@ def validating_email(email:str) -> str:
     else:
         return "Invalid "
 
-
-
-
 def main():
 
     print(validating_email("mandlagmai.com"))
