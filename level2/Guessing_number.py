@@ -2,14 +2,15 @@ from random import randint
 
 class Generator:
 
+
     @staticmethod 
-    def get_random_numb():
-        return randint(0 , 101)
+    def get_random_numb(srtart ,end):
+        return randint(srtart , end+1)
     
 def main():
 
     while True:
-        number =  Generator.get_random_numb()
+        number =  Generator.get_random_numb(20 , 500)
         print(number)
 
         user_input = int(input("Enter a number: "))
