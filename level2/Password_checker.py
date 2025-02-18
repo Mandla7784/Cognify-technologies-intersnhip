@@ -1,15 +1,15 @@
-import string
+from string import ascii_letters , punctuation ,ascii_uppercase ,digits
 
 
-capitalalphabets= string.ascii_uppercase
-smallalphabets= string.ascii_letters
-specialchar=string.punctuation
-digits=string.digits
+capitalalphabets= ascii_uppercase
+smallalphabets= ascii_letters
+specialchar=punctuation
+digits= digits
 
 
 
-print(string.punctuation)
-def password_checker(password:str)  -> str:
+
+def password_checker(password:str)  -> tuple[bool]:
  
     special = False
     uppercase = False
