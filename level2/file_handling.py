@@ -1,5 +1,4 @@
 def file_handler(file_name):
-
     try:
         with open(file_name , "r") as file:
             content = file.readlines()
@@ -11,10 +10,10 @@ def file_handler(file_name):
 
 def main():
     content = file_handler("names.txt")
-    counts = 0 
+ 
     for word  in content:
-        counts +=  content.count(word)
-        print(counts)
+        print(word)
+    
 
     
 
