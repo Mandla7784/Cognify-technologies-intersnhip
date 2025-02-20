@@ -8,14 +8,7 @@ def isPalindrome(string:str) -> bool:
 
     return False
 
-
-
 def main():
     print(isPalindrome("madam"))
-
-
-
-
- 
 if __name__=="__main__":
     main()

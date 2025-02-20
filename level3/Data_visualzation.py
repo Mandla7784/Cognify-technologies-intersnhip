@@ -6,7 +6,6 @@ import matplotlib.pyplot
 class DataVisulaizingTool:
     def __init__(self , file) -> None:
         self.file = file
-       
 
 
     def get_data(self) -> object:
@@ -17,7 +16,6 @@ class DataVisulaizingTool:
 
     def histogram(self , func)-> None:
     
-
         matplotlib.pyplot.hist(func['Range_preg'])
         matplotlib.pyplot.title("Teenage pregnancy")
         matplotlib.pyplot.show()
