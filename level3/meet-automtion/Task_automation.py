@@ -50,10 +50,6 @@ def create_space(  USER_CREDENTIALS ) -> meet.Space:
     request =  meet.CreateSpaceRequest()
     return client.create_space(request = request)
 
-
-
-
-
 def main():
     is_user_joining  = True
 
