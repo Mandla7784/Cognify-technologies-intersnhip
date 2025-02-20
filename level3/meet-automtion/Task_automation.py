@@ -1,6 +1,6 @@
 """
     In this project we create a program that will automate the process of joing metting with google meet
-    we use google cloud perhaps for the project database services
+    we use google cloud perhaps for the project database services / actually not for DB but for its functions
 """
 
 import os
