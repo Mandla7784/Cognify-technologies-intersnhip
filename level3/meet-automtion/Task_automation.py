@@ -42,9 +42,19 @@ def authorize() -> Credentials:
 
     return credentials
 
+# space creating 
+def create_space(  USER_CREDENTIALS ) -> meet.Space:
+    "create a meeting"
+
+    client = meet.SpacesServiceClient(credentials=USER_CREDENTIALS)
+    request =  meet.CreateSpaceRequest()
+    return client.create_space(request = request)
+
+
 def main():
 
     USER_CREDENTIALS = authorize()
+    
 
 
 if __name__=="__main__":
