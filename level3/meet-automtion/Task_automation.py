@@ -6,6 +6,7 @@
 import os
 import json
 
+from google.apps import meet_v2 as meet
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
@@ -40,9 +41,6 @@ def authorize() -> Credentials:
             f.write(credentials.to_json())
 
     return credentials
-
-
-
 
 def main():
 
