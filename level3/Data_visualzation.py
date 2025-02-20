@@ -1,34 +1,33 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import matplotlib
+matplotlib.use("Agg") 
+matplotlib.use("TkAgg")
 
 
-class DataVisulaizingTool:
-    def __init__(self , file) -> None:
+df = pd.read_csv("Teenage_pregnancy.csv")
+print(df.columns)
+class DataVisualizingTool:
+    def __init__(self, file) -> None:
         self.file = file
-
 
     def get_data(self) -> object:
         data = pd.read_csv(self.file)
         return data
-    
+
     # histogram of teenagers
-
-    def histogram(self , func)-> None:
-    
-        matplotlib.pyplot.hist(func['Range_preg'])
-        matplotlib.pyplot.title("Teenage pregnancy")
-        matplotlib.pyplot.show()
-
-
+    def histogram(self, func) -> None:
+        print("Available columns:", func.columns)
+        plt.hist(func['Age Range'])  # Use the correct column
+        plt.title("Teenage Pregnancy")
+        plt.show()
 
 def main():
-    vfx_Tool =  DataVisulaizingTool("Teenage_pregnancy.csv")
-    # showing the graph
-    vfx_Tool.histogram(DataVisulaizingTool.get_data(vfx_Tool))
+    vfx_Tool = DataVisualizingTool("Teenage_pregnancy.csv")
+    # Showing the graph
+    vfx_Tool.histogram(vfx_Tool.get_data())
 
 
-
-
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
