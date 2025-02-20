@@ -51,10 +51,22 @@ def create_space(  USER_CREDENTIALS ) -> meet.Space:
     return client.create_space(request = request)
 
 
+
+
+
 def main():
+    is_user_joining  = True
 
     USER_CREDENTIALS = authorize()
+    while is_user_joining:
+        space =create_space(USER_CREDENTIALS)
     
+        if USER_CREDENTIALS:
+                print(f"Join meeting at {space.meeting_uri}")
+        else:
+                print(f"Uknown user {USER_CREDENTIALS}")
+
+
 
 
 if __name__=="__main__":
