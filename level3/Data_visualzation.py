@@ -22,6 +22,9 @@ class DataVisualizingTool:
         plt.hist(func['Age Range'])  # Use the correct column
         plt.title("Teenage Pregnancy")
         plt.show()
+        # or 
+        plt.savefig("histogram.png")
+
 
 def main():
     vfx_Tool = DataVisualizingTool("Teenage_pregnancy.csv")
